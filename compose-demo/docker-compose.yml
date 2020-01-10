@@ -15,10 +15,9 @@ services:
             '--collation-server=utf8mb4_unicode_ci'
      ]
      restart: always
-       networks:
-
-         extnetwork:
-           ipv4_address: 172.17.0.2
+     networks:
+       extnetwork:
+         ipv4_address: 172.17.0.2
      environment:
        MYSQL_ROOT_PASSWORD: "root"
 
@@ -30,9 +29,9 @@ services:
       volumes:
        - "/root/temp/compose-demo/redis_data:/data"
       restart: always
-        networks:
-          extnetwork:
-            ipv4_address: 172.17.0.3
+      networks:
+        extnetwork:
+          ipv4_address: 172.17.0.3
 
     compose-java:
      build: ./java
