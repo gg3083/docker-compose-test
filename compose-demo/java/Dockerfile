@@ -3,7 +3,6 @@ FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ENV URL /root/gg/git-reop/docker-compose-test/compose-demo
 ENV BUILD_SHELL docker-entrypoint.sh
-RUN chmod a+x $URL/java/$BUILD_SHELL
 
 CMD $URL/java/$BUILD_SHELL
 
